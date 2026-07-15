@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { companies, type Company, type Project } from "@/lib/data";
+import { CompanyCarousel } from "./CompanyCarousel";
 import { SectionHeading } from "./SectionHeading";
 
 type Accent = "primary" | "secondary" | "accent";
@@ -94,7 +95,7 @@ function CompanyBlock({ company }: { company: Company }) {
         </div>
       </div>
 
-      <div className="flex gap-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-6 px-6 md:mx-0 md:px-0">
+      <CompanyCarousel>
         {company.projects.map((project) => (
           <div
             key={project.name}
@@ -103,7 +104,7 @@ function CompanyBlock({ company }: { company: Company }) {
             <ProjectCard project={project} accent={accent} />
           </div>
         ))}
-      </div>
+      </CompanyCarousel>
     </div>
   );
 }
@@ -152,12 +153,8 @@ function ProjectCard({
         </div>
       ) : (
         <div
-          className={`relative aspect-[16/9] w-full grid place-items-center ${tokens.softBg}`}
-        >
-          <span className={`font-display font-normal text-6xl ${tokens.text}`}>
-            {project.name.charAt(0)}
-          </span>
-        </div>
+          className={`relative aspect-[16/9] w-full ${tokens.softBg}`}
+        />
       )}
 
       <div className="flex flex-col p-6 flex-1">
@@ -168,7 +165,7 @@ function ProjectCard({
           <div className="flex flex-col items-end gap-1">
             {project.badge && (
               <span
-                className={`inline-flex items-center rounded-full ${tokens.softText} px-2 py-0.5 text-[10px] font-medium tracking-wider uppercase`}
+                className={`inline-flex items-center whitespace-nowrap rounded-full ${tokens.softText} px-2 py-0.5 text-[10px] font-medium tracking-wider uppercase`}
               >
                 {project.badge}
               </span>
