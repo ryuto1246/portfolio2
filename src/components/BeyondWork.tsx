@@ -67,22 +67,9 @@ function InstrumentCard({
 function LanguagesCard() {
   return (
     <article className="relative rounded-3xl bg-white ring-1 ring-border p-8 shadow-sm">
-      <div className="flex items-start gap-4 mb-5">
-        <div
-          className="shrink-0 w-14 h-14 rounded-2xl grid place-items-center text-3xl bg-secondary-soft text-secondary"
-          aria-hidden
-        >
-          🌍
-        </div>
-        <div className="flex-1">
-          <p className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-widest bg-secondary-soft text-secondary">
-            Languages
-          </p>
-          <h3 className="mt-2 font-display font-normal text-2xl leading-snug tracking-tight">
-            語学
-          </h3>
-        </div>
-      </div>
+      <h3 className="font-display font-normal text-2xl leading-snug tracking-tight mb-5">
+        語学
+      </h3>
 
       <ul className="space-y-2.5">
         {languages.map((lang) => (
