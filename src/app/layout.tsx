@@ -14,6 +14,25 @@ export const metadata: Metadata = {
   },
 };
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "中村 龍人",
+  alternateName: "Ryuto Nakamura",
+  url: "https://ryuto.tokyo",
+  jobTitle: "Founder / CTO",
+  worksFor: [
+    { "@type": "Organization", name: "Nectere", url: "https://nectere.jp" },
+    { "@type": "Organization", name: "RADICA", url: "https://radica-inc.jp" },
+  ],
+  hasOccupation: {
+    "@type": "Occupation",
+    name: "学習塾講師",
+    occupationLocation: { "@type": "City", name: "東京" },
+    skills: "数学・物理・英語・古文の指導、進路相談",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,6 +51,9 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Zen+Maru+Gothic:wght@300;400;500&display=swap"
         />
+        <script type="application/ld+json">
+          {JSON.stringify(personJsonLd).replace(/</g, "\\u003c")}
+        </script>
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         {children}

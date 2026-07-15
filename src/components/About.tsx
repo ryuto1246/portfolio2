@@ -28,6 +28,9 @@ export function About() {
             </a>
             ではエンタメを軸に、それぞれ経営とプロダクト開発に携わっています。
           </p>
+          <p className="mt-6 text-lg leading-relaxed text-foreground/85">
+            加えて、東京の学習塾で数学・物理・英語・古文を教えています。つくるだけでなく、実際に生徒の前に立って教えていることが、事業の土台になっています。
+          </p>
         </div>
       </div>
     </section>

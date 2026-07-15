@@ -21,13 +21,18 @@ const entries: Entry[] = [
     logoSrc: "/utokyo.png",
     logoAlt: "東京大学",
   },
+  {
+    period: "2024.4 〜",
+    name: "学習塾講師（東京）",
+    department: "数学・物理・英語・古文を指導。進路相談も担当。",
+  },
 ];
 
 export function Education() {
   return (
     <section id="education" className="relative py-24 md:py-32">
       <div className="mx-auto max-w-3xl px-6">
-        <SectionHeading eyebrow="Education" />
+        <SectionHeading eyebrow="Education & Career" />
         <div className="mt-10 space-y-4">
           {entries.map((entry) => (
             <EducationCard key={entry.name} entry={entry} />
