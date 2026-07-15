@@ -39,7 +39,7 @@ export function Hero() {
       />
 
       <div className="relative mx-auto max-w-6xl px-6">
-        <div className="grid md:grid-cols-[auto_auto] md:justify-center gap-8 md:gap-12 items-center">
+        <div className="grid md:grid-cols-[auto_auto] md:justify-center gap-10 md:gap-24 items-center">
         {/* Photo column */}
         <div className="relative mx-auto md:mx-0">
           <div className="relative">

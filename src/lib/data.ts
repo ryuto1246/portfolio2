@@ -9,8 +9,6 @@ export type Project = {
   outcome?: string;
   link?: string;
   linkLabel?: string;
-  badge?: string;
-  status?: string;
   imageSrc?: string;
   imageAlt?: string;
   logoSrc?: string;
@@ -52,41 +50,55 @@ export const companies: Company[] = [
         problem:
           "学業と競技の両立に悩む学生アスリートに向けた学習リソースが不足していた。",
         approach:
-          "競技スケジュールに合わせた柔軟な学習プランと、講師とのマッチング機能を提供。",
-        role: "サービス企画・運営",
-        outcome: "文武両道を後押しする学習支援の仕組みを構築。",
+          "競技スケジュールに合わせた柔軟な学習プランを設計し、文武両道の実現をサポート。2024年8月にサービス開始、2025年10月に少年スポーツ選手向けとして拡大。",
+        role: "企画・運営・資料作成・実装",
+        outcome:
+          "学習管理サービスとして運用中。現在はLP・ブランディングを刷新中。",
+        link: "https://nobilva.jp",
+        linkLabel: "サイトを見る",
         logoSrc: "/nobilva.png",
         logoAlt: "Nobilva",
         logoBg: "bg-white",
       },
       {
         name: "Teach It",
-        oneLiner: "「教えることで学ぶ」Learning by Teaching型 iOSアプリ",
+        oneLiner: "「教えることで学ぶ」iOSアプリ",
         problem: "受動的な学習で理解が浅く、知識が定着しにくい。",
         approach:
-          "自分で説明することで学ぶ「教える側」に立つ体験を、モバイルネイティブな形で提供。",
-        role: "プロダクト企画・開発統括",
+          "高校生向けに、AIの後輩キャラに数学を教えることで理解と説明力を高める「教える側に立つ」体験を提供。",
+        role: "企画・開発統括",
         outcome: "App Store公開済み。継続的にアップデート中。",
         link: "https://apps.apple.com/",
         linkLabel: "App Store",
-        badge: "iOS",
       },
       {
         name: "おきてがみ",
         oneLiner: "場所と紐づくSNS",
         problem:
           "オンラインの交流は増えたが、場所に紐づいた偶然の出会いや発見は減った。",
-        approach: "特定の場所に手紙のようにメッセージを残せるSNSを開発中。",
-        role: "プロダクト企画・開発",
-        outcome: "2026年8月公開予定。",
-        status: "Coming Aug 2026",
+        approach:
+          "場所に言葉を残せるSNS。投稿はその場所に行かないと読めず、近づくにつれて文字が鮮明になる「にじみ」の演出で、地図を歩く体験をつくる。",
+        role: "発案・企画・開発",
+        outcome:
+          "2026年8月、Nectere2本目のアプリとしてApp Store公開予定。",
+      },
+      {
+        name: "WEG 日本向けローカライズ",
+        oneLiner: "WEG（weg.net）の日本市場向けコンテンツ翻訳・ローカライズ",
+        approach:
+          "LinkedIn 投稿をはじめとする発信コンテンツを、日本のビジネス文脈に馴染む形へ翻訳・ローカライズ。",
+        role: "翻訳・ローカライズ",
+        link: "https://www.linkedin.com/company/weg/posts/?feedView=all",
+        linkLabel: "LinkedIn",
+        logoSrc: "/weg-logo.png",
+        logoAlt: "WEG",
+        logoBg: "bg-white",
       },
       {
         name: "nectere.jp",
         oneLiner: "Nectere コーポレートサイト",
         link: "https://nectere.jp",
         linkLabel: "サイトを見る",
-        badge: "Web",
         imageSrc: "/nectere-lp.png",
         imageAlt: "nectere.jp トップページ",
       },
@@ -96,7 +108,8 @@ export const companies: Company[] = [
     key: "radica",
     name: "RADICA",
     role: "CTO",
-    mission: "教育 × エンターテインメントのコンテンツを作る会社。",
+    mission:
+      "エンターテインメントを軸にコンテンツをつくる会社。現在は教育コンテンツを中心に展開。",
     accentClass: "text-secondary",
     softClass: "bg-secondary-soft",
     ringClass: "ring-secondary",
@@ -110,9 +123,10 @@ export const companies: Company[] = [
         problem: "教育コンテンツを親しみやすく届けたい。",
         approach:
           "エンターテインメント要素を強めた出題形式で、幅広い層に学びのきっかけを提供。",
-        role: "撮影・出題担当",
+        role: "撮影・出題",
         outcome: "登録者4万人を突破。",
-        badge: "YouTube",
+        link: "https://www.youtube.com/@radicalNaTakurou",
+        linkLabel: "YouTube",
         imageSrc: "/YouTube.jpg",
         imageAlt: "ラディカルなたくろう YouTubeサムネイル",
       },
@@ -121,13 +135,12 @@ export const companies: Company[] = [
         oneLiner: "ブラウザで遊べる歴史クイズゲーム",
         problem: "歴史を「暗記」ではなく「推理」として楽しく学べる場が欲しい。",
         approach:
-          "ヒントを段階的に開示する推理型UIと、AIによる問題生成を組み合わせたブラウザゲームを開発。",
+          "ヒントを段階的に開示する推理型UIと、AIによる回答判定を組み合わせたブラウザゲームを開発。",
         role: "設計・開発・収益化",
         outcome:
           "Next.js / Supabase / Gemini APIで開発。AdSenseによる広告収益化も実装。",
-        link: "https://hintory.com",
+        link: "https://hintory.radica-inc.jp",
         linkLabel: "Play",
-        badge: "Web",
         imageSrc: "/Hintory.png",
         imageAlt: "Hintory ロゴ",
       },
@@ -136,7 +149,6 @@ export const companies: Company[] = [
         oneLiner: "RADICA コーポレートサイト",
         link: "https://radica-inc.jp",
         linkLabel: "サイトを見る",
-        badge: "Web",
         imageSrc: "/radica-lp.png",
         imageAlt: "radica-inc.jp トップページ",
       },
@@ -154,11 +166,15 @@ export const companies: Company[] = [
       {
         name: "れんアカデミー",
         oneLiner: "こども向けミュージカルスクールの公式サイト",
+        problem:
+          "既存サイトは更新がしにくく、文字サイズの乱れやレスポンシブ未対応といった技術的な課題を抱えていた。",
         approach:
-          "「目が、声が、顔が、輝く。」をキーコピーに、レッスン案内・講師紹介・公演情報・体験申込までを一貫して届けるサイトを設計・制作。",
+          "保守性とレスポンシブ対応を重視して作り直し。「目が、声が、輝く。」をキーコピーに、レッスン案内〜体験申込までの導線を再設計。",
+        role: "DNS設定・デザイン・実装",
+        outcome:
+          "公式サイトをリニューアル公開。保守性・レスポンシブ対応を改善。",
         link: "https://ren-aka.com",
         linkLabel: "サイトを見る",
-        badge: "Web",
         imageSrc: "/ren-aka.png",
         imageAlt: "れんアカデミー トップページ",
       },
@@ -166,7 +182,6 @@ export const companies: Company[] = [
         name: "FLL Korea Open Invitational",
         oneLiner: "日本代表チームのプレゼン通訳を担当",
         role: "日本代表チームに帯同し、審査員向けプレゼンテーションの日英通訳を担当。",
-        badge: "通訳",
         logoSrc: "/fll-korea-event.png",
         logoAlt: "FIRST LEGO League Korea",
         logoBg: "bg-white",
@@ -188,15 +203,31 @@ export const heroTags: HeroTag[] = [
   { label: "音楽", href: "#beyond" },
 ];
 
-export const techSkills = [
-  "Next.js",
-  "React",
-  "TypeScript",
-  "Supabase",
-  "Gemini API",
-  "Cloudflare",
-  "DNS / インフラ",
-  "iOS (Swift)",
+export type TechSkillGroup = {
+  category: string;
+  items: string[];
+};
+
+export const techSkillGroups: TechSkillGroup[] = [
+  {
+    category: "開発",
+    items: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Supabase",
+      "Gemini API",
+      "iOS (Swift)",
+    ],
+  },
+  {
+    category: "インフラ",
+    items: ["Cloudflare", "DNS（基礎レベル）"],
+  },
+  {
+    category: "デザイン・クリエイティブ",
+    items: ["Figma", "Illustrator", "Premiere Pro"],
+  },
 ];
 
 export type Language = {

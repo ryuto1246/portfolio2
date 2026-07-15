@@ -103,7 +103,7 @@ function LanguagesCard() {
               ))}
             </span>
             <span className="text-sm font-medium flex-1">{lang.name}</span>
-            <span className="text-xs text-foreground/60 font-medium bg-secondary-soft text-secondary rounded-full px-2 py-0.5">
+            <span className="text-xs text-foreground/60 font-medium">
               {lang.level}
             </span>
           </li>

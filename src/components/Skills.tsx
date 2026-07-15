@@ -1,5 +1,5 @@
 import { SectionHeading } from "./SectionHeading";
-import { techSkills, certificates } from "@/lib/data";
+import { techSkillGroups, certificates } from "@/lib/data";
 
 export function Skills() {
   return (
@@ -14,16 +14,25 @@ export function Skills() {
               title="Tech Stack"
               tone="primary"
             />
-            <ul className="mt-5 flex flex-wrap gap-2">
-              {techSkills.map((skill) => (
-                <li
-                  key={skill}
-                  className="inline-flex items-center rounded-full bg-primary-soft text-primary px-3 py-1 text-sm font-medium"
-                >
-                  {skill}
-                </li>
+            <div className="mt-5 space-y-4">
+              {techSkillGroups.map((group) => (
+                <div key={group.category}>
+                  <p className="text-[10px] font-medium uppercase tracking-widest text-foreground/50">
+                    {group.category}
+                  </p>
+                  <ul className="mt-2 flex flex-wrap gap-2">
+                    {group.items.map((skill) => (
+                      <li
+                        key={skill}
+                        className="inline-flex items-center rounded-full bg-primary-soft text-primary-strong px-3 py-1 text-sm font-medium"
+                      >
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
           <div className="rounded-3xl bg-white ring-1 ring-border p-6 shadow-sm">

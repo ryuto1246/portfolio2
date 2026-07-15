@@ -28,11 +28,6 @@ export function About() {
             </a>
             ではエンタメを軸に、それぞれ経営とプロダクト開発に携わっています。
           </p>
-          <p className="mt-6 text-lg leading-relaxed text-foreground/85">
-            直近では、両事業とも
-            <span className="wavy-underline">教育</span>
-            という領域で形にしています。
-          </p>
         </div>
       </div>
     </section>

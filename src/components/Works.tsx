@@ -10,7 +10,7 @@ const accentTokens = {
     text: "text-primary",
     bg: "bg-primary",
     softBg: "bg-primary-soft",
-    softText: "bg-primary-soft text-primary",
+    softText: "bg-primary-soft text-primary-strong",
   },
   secondary: {
     text: "text-secondary",
@@ -158,25 +158,9 @@ function ProjectCard({
       )}
 
       <div className="flex flex-col p-6 flex-1">
-        <div className="flex items-start justify-between gap-3 mb-3">
-          <h4 className="font-display font-normal text-2xl leading-tight tracking-tight">
-            {project.name}
-          </h4>
-          <div className="flex flex-col items-end gap-1">
-            {project.badge && (
-              <span
-                className={`inline-flex items-center whitespace-nowrap rounded-full ${tokens.softText} px-2 py-0.5 text-[10px] font-medium tracking-wider uppercase`}
-              >
-                {project.badge}
-              </span>
-            )}
-            {project.status && (
-              <span className="inline-flex items-center rounded-full bg-accent-soft text-foreground px-2 py-0.5 text-[10px] font-medium tracking-wider">
-                {project.status}
-              </span>
-            )}
-          </div>
-        </div>
+        <h4 className="font-display font-normal text-2xl leading-tight tracking-tight mb-3">
+          {project.name}
+        </h4>
 
         <p className={`text-sm font-medium ${tokens.text} mb-4`}>
           {project.oneLiner}
