@@ -39,7 +39,7 @@ export function Hero() {
       />
 
       <div className="relative mx-auto max-w-6xl px-6">
-        <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-6 md:gap-10 items-center">
+        <div className="grid md:grid-cols-[auto_auto] md:justify-center gap-8 md:gap-12 items-center">
         {/* Photo column */}
         <div className="relative mx-auto md:mx-0">
           <div className="relative">
@@ -47,12 +47,12 @@ export function Hero() {
               aria-hidden
               className="absolute -inset-4 rounded-full bg-gradient-to-br from-primary via-accent to-secondary opacity-40 blur-2xl"
             />
-            <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-full ring-4 ring-white shadow-xl overflow-hidden bg-gradient-to-br from-primary-soft via-white to-secondary-soft">
+            <div className="relative w-56 h-56 md:w-80 md:h-80 rounded-full ring-4 ring-white shadow-xl overflow-hidden bg-gradient-to-br from-primary-soft via-white to-secondary-soft">
               <Image
                 src="/nakamura.png"
                 alt="中村龍人"
                 fill
-                sizes="(min-width: 768px) 288px, 224px"
+                sizes="(min-width: 768px) 320px, 224px"
                 className="object-cover object-top"
                 priority
               />
