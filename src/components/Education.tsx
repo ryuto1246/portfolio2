@@ -22,9 +22,9 @@ const entries: Entry[] = [
     logoAlt: "東京大学",
   },
   {
-    period: "2024.4 〜",
+    period: "2024.10 〜",
     name: "学習塾講師（東京）",
-    department: "数学・物理・英語・古文を指導。進路相談も担当。",
+    department: "数学・物理・化学・英語・現代文・古文を指導。進路指導も担当。",
   },
 ];
 

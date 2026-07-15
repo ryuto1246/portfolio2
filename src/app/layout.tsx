@@ -29,7 +29,7 @@ const personJsonLd = {
     "@type": "Occupation",
     name: "学習塾講師",
     occupationLocation: { "@type": "City", name: "東京" },
-    skills: "数学・物理・英語・古文の指導、進路相談",
+    skills: "数学・物理・化学・英語・現代文・古文の指導、進路指導",
   },
 };
 
