@@ -161,7 +161,7 @@ export const companies: Company[] = [
     accentClass: "text-foreground",
     softClass: "bg-accent-soft",
     ringClass: "ring-accent",
-    email: "nakamura@ryuto.tokyo",
+    email: "ryutonakamura1246@gmail.com",
     projects: [
       {
         name: "れんアカデミー",
