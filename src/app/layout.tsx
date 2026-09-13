@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { socialLinks } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "中村龍人 / Ryuto Nakamura — Portfolio",
@@ -31,6 +32,7 @@ const personJsonLd = {
     occupationLocation: { "@type": "City", name: "東京" },
     skills: "数学・物理・化学・英語・現代文・古文の指導、進路指導",
   },
+  sameAs: socialLinks.map((link) => link.url),
 };
 
 export default function RootLayout({

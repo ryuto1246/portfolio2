@@ -1,4 +1,5 @@
-import { companies } from "@/lib/data";
+import { companies, socialLinks } from "@/lib/data";
+import { InstagramIcon, NoteIcon } from "./SocialIcons";
 
 type EmailChannel = {
   label: string;
@@ -98,6 +99,31 @@ export function Contact() {
             </li>
           ))}
         </ul>
+
+        <div className="mt-10 flex flex-col items-center gap-3">
+          <p className="text-xs font-medium tracking-[0.2em] uppercase text-white/50">
+            Elsewhere
+          </p>
+          <ul className="flex flex-wrap items-center justify-center gap-2">
+            {socialLinks.map((link) => {
+              const Icon = link.label === "note" ? NoteIcon : InstagramIcon;
+              return (
+                <li key={link.url}>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="me noopener noreferrer"
+                    aria-label={link.label}
+                    className="group inline-flex items-center gap-2 rounded-full bg-white/5 ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/30 transition-colors px-4 py-2 text-sm text-white"
+                  >
+                    <Icon className="w-4 h-4" />
+                    <span>{link.label}</span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </section>
   );

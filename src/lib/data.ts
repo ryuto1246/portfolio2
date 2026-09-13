@@ -161,7 +161,7 @@ export const companies: Company[] = [
     accentClass: "text-foreground",
     softClass: "bg-accent-soft",
     ringClass: "ring-accent",
-    email: "ryutonakamura1246@gmail.com",
+    email: "nakamura@ryuto.tokyo",
     projects: [
       {
         name: "れんアカデミー",
@@ -249,6 +249,16 @@ export const certificates = [
   { name: "IELTS", status: "7.5" },
   { name: "Goethe-Zertifikat B2", status: "Lesen 除く" },
   { name: "基本情報技術者試験", status: "" },
+];
+
+export type SocialLink = {
+  label: string;
+  url: string;
+};
+
+export const socialLinks: SocialLink[] = [
+  { label: "note", url: "https://note.com/ryuto1246" },
+  { label: "Instagram", url: "https://www.instagram.com/ryutonakamura1246/" },
 ];
 
 export const navItems = [

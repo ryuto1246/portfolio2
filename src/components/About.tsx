@@ -1,4 +1,6 @@
 import { SectionHeading } from "./SectionHeading";
+import { socialLinks } from "@/lib/data";
+import { InstagramIcon, NoteIcon } from "./SocialIcons";
 
 export function About() {
   return (
@@ -31,6 +33,26 @@ export function About() {
           <p className="mt-6 text-lg leading-relaxed text-foreground/85">
             加えて、東京の学習塾で数学・物理・化学・英語・現代文・古文を教え、進路指導も担当しています。
           </p>
+
+          <ul className="mt-8 flex flex-wrap items-center gap-2">
+            {socialLinks.map((link) => {
+              const Icon = link.label === "note" ? NoteIcon : InstagramIcon;
+              return (
+                <li key={link.url}>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="me noopener noreferrer"
+                    aria-label={link.label}
+                    className="group inline-flex items-center gap-2 rounded-full bg-white ring-1 ring-border hover:ring-primary hover:text-primary transition-colors px-3.5 py-1.5 text-sm text-foreground/80"
+                  >
+                    <Icon className="w-4 h-4" />
+                    <span className="font-medium">{link.label}</span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </section>
