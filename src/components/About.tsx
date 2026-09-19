@@ -1,6 +1,6 @@
 import { SectionHeading } from "./SectionHeading";
 import { socialLinks } from "@/lib/data";
-import { InstagramIcon, NoteIcon } from "./SocialIcons";
+import { socialIconByLabel } from "./SocialIcons";
 
 export function About() {
   return (
@@ -36,7 +36,7 @@ export function About() {
 
           <ul className="mt-8 flex flex-wrap items-center gap-2">
             {socialLinks.map((link) => {
-              const Icon = link.label === "note" ? NoteIcon : InstagramIcon;
+              const Icon = socialIconByLabel[link.label];
               return (
                 <li key={link.url}>
                   <a

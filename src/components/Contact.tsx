@@ -1,5 +1,5 @@
 import { companies, socialLinks } from "@/lib/data";
-import { InstagramIcon, NoteIcon } from "./SocialIcons";
+import { socialIconByLabel } from "./SocialIcons";
 
 type EmailChannel = {
   label: string;
@@ -106,7 +106,7 @@ export function Contact() {
           </p>
           <ul className="flex flex-wrap items-center justify-center gap-2">
             {socialLinks.map((link) => {
-              const Icon = link.label === "note" ? NoteIcon : InstagramIcon;
+              const Icon = socialIconByLabel[link.label];
               return (
                 <li key={link.url}>
                   <a

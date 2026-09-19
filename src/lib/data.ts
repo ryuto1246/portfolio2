@@ -259,6 +259,8 @@ export type SocialLink = {
 export const socialLinks: SocialLink[] = [
   { label: "note", url: "https://note.com/ryuto1246" },
   { label: "Instagram", url: "https://www.instagram.com/ryutonakamura1246/" },
+  { label: "Facebook", url: "https://www.facebook.com/profile.php?id=100025145191972" },
+  { label: "X", url: "https://x.com/ryuto1246" },
 ];
 
 export const navItems = [
