@@ -1,5 +1,10 @@
 export type CompanyKey = "nectere" | "radica" | "personal";
 
+export type ProjectImage = {
+  src: string;
+  alt?: string;
+};
+
 export type Project = {
   name: string;
   oneLiner: string;
@@ -11,6 +16,8 @@ export type Project = {
   linkLabel?: string;
   imageSrc?: string;
   imageAlt?: string;
+  imageFit?: "cover" | "contain";
+  images?: ProjectImage[];
   logoSrc?: string;
   logoAlt?: string;
   logoBg?: string;
@@ -61,6 +68,21 @@ export const companies: Company[] = [
         logoBg: "bg-white",
       },
       {
+        name: "野球をがんばる中学生の高校受験",
+        oneLiner: "Kindle本 — 野球推薦・内申・英検・引退後の勉強まで",
+        problem:
+          "野球を続けながら高校受験に向かう中学生の保護者には、進路（野球推薦・推薦入試・一般入試）や、内申・英検・引退後の勉強の進め方をまとめた情報が少なかった。",
+        approach:
+          "3つの進路と、内申・英検・引退後の勉強の進め方をまとめたKindle本として編集。Nobilvaのブログ記事をもとに再構成。",
+        role: "著（監修：養田貴大）",
+        outcome: "Nectere、2026年刊。Kindle版で発売中。",
+        link: "https://www.amazon.co.jp/dp/B0HM1HKQBN",
+        linkLabel: "Amazonで見る",
+        imageSrc: "/images/works/yakyu-koukou-juken-cover.jpg",
+        imageAlt: "『野球をがんばる中学生の高校受験』の表紙",
+        imageFit: "contain",
+      },
+      {
         name: "Teach It",
         oneLiner: "「教えることで学ぶ」iOSアプリ",
         problem: "受動的な学習で理解が浅く、知識が定着しにくい。",
@@ -68,8 +90,11 @@ export const companies: Company[] = [
           "高校生向けに、AIの後輩キャラに数学を教えることで理解と説明力を高める「教える側に立つ」体験を提供。",
         role: "企画・開発統括",
         outcome: "App Store公開済み。継続的にアップデート中。",
-        link: "https://apps.apple.com/",
+        link: "https://apps.apple.com/jp/app/teach-it/id6758047725",
         linkLabel: "App Store",
+        imageSrc: "/images/works/teach-it-screenshot.webp",
+        imageAlt: "Teach It — AIに教えて 思考力UP & 理解定着",
+        imageFit: "contain",
       },
       {
         name: "おきてがみ",
@@ -81,6 +106,20 @@ export const companies: Company[] = [
         role: "発案・企画・開発",
         outcome:
           "2026年8月、Nectere2本目のアプリとしてApp Store公開予定。",
+        images: [
+          {
+            src: "/images/works/okitegami-01.png",
+            alt: "おきてがみ — あなたの言葉を街に残そう",
+          },
+          {
+            src: "/images/works/okitegami-02.png",
+            alt: "おきてがみ — 立ち止まったこの場所に",
+          },
+          {
+            src: "/images/works/okitegami-03.png",
+            alt: "おきてがみ — 投稿は近くへいかないと読めません",
+          },
+        ],
       },
       {
         name: "WEG 日本向けローカライズ",

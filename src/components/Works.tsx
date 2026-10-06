@@ -127,14 +127,39 @@ function ProjectCard({
 
   return (
     <article className="group relative flex flex-col w-full rounded-3xl bg-white ring-1 ring-border p-0 hover:ring-foreground/30 hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-xl overflow-hidden">
-      {project.imageSrc ? (
-        <div className="relative aspect-[16/9] w-full overflow-hidden">
+      {project.images && project.images.length > 0 ? (
+        <div
+          className="relative aspect-[16/9] w-full overflow-hidden bg-white grid"
+          style={{
+            gridTemplateColumns: `repeat(${project.images.length}, minmax(0, 1fr))`,
+          }}
+        >
+          {project.images.map((img) => (
+            <div key={img.src} className="relative h-full w-full">
+              <Image
+                src={img.src}
+                alt={img.alt ?? project.name}
+                fill
+                sizes="(min-width: 1024px) 110px, (min-width: 768px) 15vw, 30vw"
+                className="object-contain"
+              />
+            </div>
+          ))}
+        </div>
+      ) : project.imageSrc ? (
+        <div
+          className={`relative aspect-[16/9] w-full overflow-hidden ${
+            project.imageFit === "contain" ? "bg-white" : ""
+          }`}
+        >
           <Image
             src={project.imageSrc}
             alt={project.imageAlt ?? project.name}
             fill
             sizes="(min-width: 1024px) 320px, (min-width: 768px) 45vw, 90vw"
-            className="object-cover"
+            className={
+              project.imageFit === "contain" ? "object-contain" : "object-cover"
+            }
           />
         </div>
       ) : project.logoSrc ? (

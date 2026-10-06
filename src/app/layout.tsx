@@ -15,9 +15,12 @@ export const metadata: Metadata = {
   },
 };
 
+const personId = "https://ryuto.tokyo/#person";
+
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": personId,
   name: "中村 龍人",
   alternateName: "Ryuto Nakamura",
   url: "https://ryuto.tokyo",
@@ -33,6 +36,25 @@ const personJsonLd = {
     skills: "数学・物理・化学・英語・現代文・古文の指導、進路指導",
   },
   sameAs: socialLinks.map((link) => link.url),
+  subjectOf: [
+    {
+      "@type": "Book",
+      "@id": "https://www.amazon.co.jp/dp/B0HM1HKQBN#book",
+      name: "野球をがんばる中学生の高校受験",
+      alternativeHeadline: "野球推薦・内申・英検・引退後の勉強まで",
+      inLanguage: "ja",
+      bookFormat: "https://schema.org/EBook",
+      url: "https://www.amazon.co.jp/dp/B0HM1HKQBN",
+      image: "https://ryuto.tokyo/images/works/yakyu-koukou-juken-cover.jpg",
+      author: { "@id": personId },
+      editor: { "@type": "Person", name: "養田貴大" },
+      publisher: {
+        "@type": "Organization",
+        name: "Nectere",
+        url: "https://www.nectere.jp",
+      },
+    },
+  ],
 };
 
 export default function RootLayout({
