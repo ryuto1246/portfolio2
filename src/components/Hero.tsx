@@ -76,7 +76,7 @@ export function Hero() {
               href="#works"
               className="inline-flex items-center rounded-full bg-foreground/[0.06] px-3 py-1.5 text-sm font-medium text-foreground/80 hover:bg-foreground hover:text-white transition-colors"
             >
-              Nectere Founder
+              Nectere Co-founder
             </a>
             <a
               href="#works"

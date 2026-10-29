@@ -42,7 +42,7 @@ export const companies: Company[] = [
   {
     key: "nectere",
     name: "Nectere",
-    role: "Founder",
+    role: "Co-founder",
     mission: "テクノロジーと人間の架け橋となる会社。",
     accentClass: "text-primary",
     softClass: "bg-primary-soft",
