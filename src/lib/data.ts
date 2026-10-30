@@ -42,7 +42,7 @@ export const companies: Company[] = [
   {
     key: "nectere",
     name: "Nectere",
-    role: "Founder",
+    role: "Co-founder",
     mission: "テクノロジーと人間の架け橋となる会社。",
     accentClass: "text-primary",
     softClass: "bg-primary-soft",
@@ -53,14 +53,14 @@ export const companies: Company[] = [
     projects: [
       {
         name: "Nobilva",
-        oneLiner: "学生アスリートの学習を支える学習支援サービス",
+        oneLiner: "野球をがんばる中高生のための学習管理サービス",
         problem:
           "学業と競技の両立に悩む学生アスリートに向けた学習リソースが不足していた。",
         approach:
-          "競技スケジュールに合わせた柔軟な学習プランを設計し、文武両道の実現をサポート。2024年8月にサービス開始、2025年10月に少年スポーツ選手向けとして拡大。",
+          "練習や試合の予定に合わせた日割りの学習計画を立て、週1回のオンライン面談と毎日の進捗確認で、部活と勉強の両立を支える。2024年8月にサービスを開始。",
         role: "企画・運営・資料作成・実装",
         outcome:
-          "学習管理サービスとして運用中。現在はLP・ブランディングを刷新中。",
+          "野球をがんばる中高生向けに運営中。2026年10月に、ブログ記事をもとにしたKindle本を出版。",
         link: "https://nobilva.jp",
         linkLabel: "サイトを見る",
         logoSrc: "/nobilva.png",
@@ -97,15 +97,26 @@ export const companies: Company[] = [
         imageFit: "contain",
       },
       {
-        name: "おきてがみ",
+        name: "キミセン",
+        oneLiner: "学習塾向けの「教えることで学ぶ」アプリ",
+        problem:
+          "生徒が家でどこまで理解できたかを、塾の先生が授業の外で把握しにくい。",
+        approach:
+          "Teach It の「AIのキャラに教えて学ぶ」仕組みをもとに、塾の先生が範囲や課題を指定し、生徒ごとの習熟度を確認できる形にした塾向け版。",
+        role: "企画・開発統括",
+        outcome: "開発中。",
+      },
+      {
+        name: "おきてがみ.",
         oneLiner: "場所と紐づくSNS",
         problem:
           "オンラインの交流は増えたが、場所に紐づいた偶然の出会いや発見は減った。",
         approach:
           "場所に言葉を残せるSNS。投稿はその場所に行かないと読めず、近づくにつれて文字が鮮明になる「にじみ」の演出で、地図を歩く体験をつくる。",
         role: "発案・企画・開発",
-        outcome:
-          "2026年8月、Nectere2本目のアプリとしてApp Store公開予定。",
+        outcome: "2026年10月、Nectere2本目のアプリとしてApp Storeで公開。",
+        link: "https://apps.apple.com/jp/app/%E3%81%8A%E3%81%8D%E3%81%A6%E3%81%8C%E3%81%BF/id6760570671",
+        linkLabel: "App Store",
         images: [
           {
             src: "/images/works/okitegami-01.png",

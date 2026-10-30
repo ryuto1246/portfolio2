@@ -15,6 +15,11 @@ const entries: Entry[] = [
     name: "東京都立戸山高校",
   },
   {
+    period: "2021.5 〜",
+    name: "Nectere",
+    department: "共同運営",
+  },
+  {
     period: "2024.4 〜",
     name: "東京大学 工学部 計数工学科",
     department: "システム情報工学コース",
@@ -25,6 +30,11 @@ const entries: Entry[] = [
     period: "2024.10 〜",
     name: "学習塾講師（東京）",
     department: "数学・物理・化学・英語・現代文・古文を指導。進路指導も担当。",
+  },
+  {
+    period: "2025.3 〜",
+    name: "株式会社RADICA",
+    department: "CTO",
   },
 ];
 

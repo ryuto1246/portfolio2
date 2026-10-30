@@ -178,8 +178,15 @@ function ProjectCard({
         </div>
       ) : (
         <div
-          className={`relative aspect-[16/9] w-full ${tokens.softBg}`}
-        />
+          aria-hidden
+          className={`relative aspect-[16/9] w-full flex items-center justify-center px-6 ${tokens.softBg}`}
+        >
+          <span
+            className={`font-display font-normal text-4xl tracking-tight ${tokens.text}`}
+          >
+            {project.name}
+          </span>
+        </div>
       )}
 
       <div className="flex flex-col p-6 flex-1">
