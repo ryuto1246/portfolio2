@@ -15,16 +15,16 @@ const entries: Entry[] = [
     name: "東京都立戸山高校",
   },
   {
+    period: "2021.5 〜",
+    name: "Nectere",
+    department: "共同運営",
+  },
+  {
     period: "2024.4 〜",
     name: "東京大学 工学部 計数工学科",
     department: "システム情報工学コース",
     logoSrc: "/utokyo.png",
     logoAlt: "東京大学",
-  },
-  {
-    period: "2024.8 〜",
-    name: "Nectere",
-    department: "共同運営",
   },
   {
     period: "2024.10 〜",
